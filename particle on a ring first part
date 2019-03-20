@@ -1,0 +1,14 @@
+import numpy as np 
+from matplotlib import pyplot as plt
+
+o=np.linspace(0,2*np.pi,1000)
+m=2
+
+def pir_func(m,o):
+    ci=0+1j
+    norm=1/(np.sqrt(2*np.pi))
+    space=np.exp(ci*m*o)
+    return norm*space
+y=pir_func(m,o)
+plt.plot(o,y,'blue')
+plt.show()
